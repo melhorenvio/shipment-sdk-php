@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "MelhorEnvio\\ShipmentSdk\\": "src"
+            "MelhorEnvio\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "MelhorEnvio\\ShipmentSdk\\Tests\\": "tests"
+            "MelhorEnvio\\Tests\\": "tests"
         }
     },
     "scripts": {
