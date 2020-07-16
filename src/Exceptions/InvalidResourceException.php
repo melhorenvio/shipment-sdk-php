@@ -1,6 +1,5 @@
 <?php
 
-
 namespace MelhorEnvio\Exceptions;
 
 use InvalidArgumentException;

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace MelhorEnvio\Enums;
-
 
 class Endpoint
 {

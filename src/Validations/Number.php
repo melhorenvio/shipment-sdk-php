@@ -1,8 +1,6 @@
 <?php
 
-
 namespace MelhorEnvio\Validations;
-
 
 class Number
 {

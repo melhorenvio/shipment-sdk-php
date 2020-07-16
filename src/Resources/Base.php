@@ -1,6 +1,5 @@
 <?php
 
-
 namespace MelhorEnvio\Resources;
 
 use Exception;
@@ -93,4 +92,3 @@ abstract class Base implements Resource
         $this->http = $http;
     }
 }
-

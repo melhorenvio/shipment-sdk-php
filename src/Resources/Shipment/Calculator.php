@@ -1,6 +1,5 @@
 <?php
 
-
 namespace MelhorEnvio\Resources\Shipment;
 
 use GuzzleHttp\Exception\ClientException;

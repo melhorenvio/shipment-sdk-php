@@ -13,12 +13,6 @@
             "name": "Rodrigo Silveira",
             "email": "rodrigo.silveira@melhorenvio.com",
             "role": "Developer"
-        },
-        {
-            "name": "Pedro Barros",
-            "email": "pedro.barros@melhorenvio.com",
-            "role": "Developer"
-
         }
     ],
     "require": {

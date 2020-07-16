@@ -1,8 +1,6 @@
 <?php
 
-
 namespace MelhorEnvio\Resources\Shipment;
-
 
 class Package extends Volume
 {

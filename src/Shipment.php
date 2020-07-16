@@ -1,6 +1,5 @@
 <?php
 
-
 namespace MelhorEnvio;
 
 use MelhorEnvio\Resources\Base;
