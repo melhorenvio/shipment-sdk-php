@@ -45,11 +45,13 @@ try {
 }
 
 foreach ($quotations as $quotation) {
+    print("Service: " . $quotation['name'] . " ");
+
     if (isset($quotation['error'])) {
         echo $quotation['error'];
         continue;
     }
 
-    print("Custom Price: " . $quotation['custom_price']);
-    print("Custom Delivery Time: " . $quotation['custom_delivery_time']);
+    print("Custom Price: " . $quotation['custom_price'] . " ");
+    print("Custom Delivery Time: " . $quotation['custom_delivery_time'] . PHP_EOL);
 }
