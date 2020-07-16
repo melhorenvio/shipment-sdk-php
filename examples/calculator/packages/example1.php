@@ -19,7 +19,7 @@ try {
 
     $calculator->setOwnHand();
     $calculator->setReceipt(false);
-    $calculator->setCollect(true);
+    $calculator->setCollect(false);
 
     $calculator->addPackages(
         new Package(12, 4, 17, 0.1, 6.0),

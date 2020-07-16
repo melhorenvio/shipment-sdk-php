@@ -4,7 +4,7 @@
 namespace MelhorEnvio\Resources\Shipment;
 
 
-class Package
+class Package extends Volume
 {
     /**
      * @var int
@@ -16,16 +16,16 @@ class Package
      *
      * @param $height
      * @param $width
-     * @param $lenght
-     * @param $weitght
+     * @param $length
+     * @param $weight
      * @param $insurance
      */
-    public function __construct($height, $width, $lenght, $weitght, $insurance)
+    public function __construct($height, $width, $length, $weight, $insurance)
     {
         $this->setHeight($height);
         $this->setWidth($width);
-        $this->setLength($lenght);
-        $this->setWeight($weitght);
+        $this->setLength($length);
+        $this->setWeight($weight);
         $this->setInsurance($insurance);
     }
 

@@ -3,15 +3,12 @@
 
 namespace MelhorEnvio\Resources\Shipment;
 
-use MelhorEnvio\Concerns\Arrayble;
+use MelhorEnvio\Concerns\Arrayable;
 use MelhorEnvio\Validations\Number;
 use InvalidArgumentException;
 
 abstract class Volume implements Arrayable
 {
-    /**
-     *
-     */
     protected $height;
     protected $width;
     protected $length;

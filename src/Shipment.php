@@ -13,6 +13,6 @@ class Shipment extends Base
      */
     public function calculator()
     {
-        new Calculator($this);
+        return new Calculator($this);
     }
 }

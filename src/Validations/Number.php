@@ -8,9 +8,9 @@ class Number
 {
     /**
      * @param int|float $number
-     * @return
+     * @return bool
      */
-    public static function isPostive($number)
+    public static function isPositive($number)
     {
         return (is_integer($number) || is_float($number)) && $number > 0;
     }
@@ -19,8 +19,8 @@ class Number
      * @param int $number
      * @return bool
      */
-    public static function isPostiveInteger($number)
+    public static function isPositiveInteger($number)
     {
-        return is_integer($number) && number > 0;
+        return is_integer($number) && $number > 0;
     }
 }
