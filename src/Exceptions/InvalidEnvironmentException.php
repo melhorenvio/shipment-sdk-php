@@ -5,7 +5,7 @@ namespace MelhorEnvio\Exceptions;
 
 use InvalidArgumentException;
 
-class InvalidEnviromentException extends InvalidArgumentException
+class InvalidEnvironmentException extends InvalidArgumentException
 {
     //
 }
