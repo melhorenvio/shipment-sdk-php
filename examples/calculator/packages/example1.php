@@ -8,7 +8,7 @@ use MelhorEnvio\Enums\Service;
 use MelhorEnvio\Enums\Environment;
 
 // Create Shipment Instance
-$shipment = new Shipment('14d96139bc175f899b0eb1ab069f3922ac34c73dafe48d9a3d77472226a2cd885167c0fab9ea4e74', Environment::PRODUCTION);
+$shipment = new Shipment('your-token', Environment::PRODUCTION);
 
 try {
     // Create Calculator Instance
