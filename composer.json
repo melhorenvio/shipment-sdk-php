@@ -10,9 +10,15 @@
     "type": "library",
     "authors": [
         {
+            "name": "Rodrigo Silveira",
+            "email": "rodrigo.silveira@melhorenvio.com",
+            "role": "Developer"
+        },
+        {
             "name": "Pedro Barros",
             "email": "pedro.barros@melhorenvio.com",
             "role": "Developer"
+
         }
     ],
     "require": {
@@ -25,12 +31,12 @@
     },
     "autoload": {
         "psr-4": {
-            "MelhorEnvio\\": "src"
+            "MelhorEnvio\\ShipmentSdk\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "MelhorEnvio\\Tests\\": "tests"
+            "MelhorEnvio\\ShipmentSdk\\Tests\\": "tests"
         }
     },
     "scripts": {
