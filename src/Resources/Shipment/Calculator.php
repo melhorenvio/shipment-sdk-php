@@ -281,7 +281,6 @@ class Calculator
 
             return json_decode((string) $response->getBody(), true);
         } catch (ClientException $exception) {
-            // TODO: verificar CalculatorException
             throw new CalculatorException($exception);
         }
     }

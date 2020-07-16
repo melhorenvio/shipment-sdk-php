@@ -26,7 +26,6 @@ try {
         new Package(12, 4, 17, 0.1, 6.0),
         new Package(12, 4, 17, 0.1, 6.0),
         new Package(12, 4, 17, 0.1, 6.0)
-
     );
 
     $calculator->addServices(
