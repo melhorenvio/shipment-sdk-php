@@ -192,7 +192,7 @@ Consulte [CONTRIBUTING](CONTRIBUTING.md) para mais detalhes.
 
 Se você descobrir algum problema de segurança, por favor, envie um e-mail para tecnologia@melhorenvio.com, ao invés de usar um 'issue tracker'.
 
-## Credits
+## Créditos
 
 - [Rodrigo Silveira](https://github.com/melhorenvio)
 - [Marçal Pizzi](https://github.com/melhorenvio)
