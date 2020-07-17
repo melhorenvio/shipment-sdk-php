@@ -27,7 +27,7 @@ Agora ficou mais fácil ter o serviço de cotações do Melhor Envio no seu proj
 ## Dependências
 
 ### require 
-* PHP >= 7.1
+* PHP >= 5.6
 * Ext-json = *
 * Guzzlehttp/guzzle >= 6.5
 
@@ -40,7 +40,7 @@ Agora ficou mais fácil ter o serviço de cotações do Melhor Envio no seu proj
 Você pode instalar o pacote via composer, rodando o seguinte comando:
 
 ```bash
-composer require melhorenvio/shipment-sdk
+composer require melhorenvio/shipment-sdk-php
 ```
 
 ## Configuração inicial
@@ -140,7 +140,7 @@ $calculator->addProducts(
     );
 ```
 
-**É importante ressaltar que sejam feita as montagens dos payloads de PACOTES e PRODUTOS em arquivos separados. Um para cada responsabilidade, como segue no projeto.**
+**É importante ressaltar que sejam feitas as montagens dos payloads de PACOTES e PRODUTOS em arquivos separados. Um para cada responsabilidade, como segue no projeto.**
 
 ### Adicionando os serviços das transportadoras
 
@@ -170,7 +170,11 @@ print_r($quotations);
 exit;
 ```
 
-### Testing
+### Mais exemplos
+
+[Aqui você pode acessar mais exemplos de implementação](/examples)
+
+### Testes
 
 ``` bash
 composer test
@@ -178,25 +182,21 @@ composer test
 
 ### Changelog
 
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+Consulte [CHANGELOG](CHANGELOG.md) para mais informações de alterações recentes.
 
-## Contributing
+## Contribuindo
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+Consulte [CONTRIBUTING](CONTRIBUTING.md) para mais detalhes.
 
-### Security
+### Segurança
 
-If you discover any security related issues, please email rodrigo.silveira@melhorenvio.com instead of using the issue tracker.
+Se você descobrir algum problema de segurança, por favor, envie um e-mail para tecnologia@melhorenvio.com, ao invés de usar um 'issue tracker'.
 
 ## Credits
 
 - [Rodrigo Silveira](https://github.com/melhorenvio)
-- [All Contributors](../../contributors)
+- [Marçal Pizzi](https://github.com/melhorenvio)
 
-## License
+## Licença
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-## PHP Package Boilerplate
-
-This package was generated using the [PHP Package Boilerplate](https://laravelpackageboilerplate.com).
+MIT License (MIT). Consulte [Arquivo de lincença](LICENSE.md) para mais informações.

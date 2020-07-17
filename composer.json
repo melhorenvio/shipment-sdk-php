@@ -1,9 +1,9 @@
 {
-    "name": "melhorenvio/shipment-sdk",
+    "name": "melhorenvio/shipment-sdk-php",
     "description": "Este pacote é responsável por realizar o cálculo de cotações.",
     "keywords": [
         "melhorenvio",
-        "shipment-sdk"
+        "shipment-sdk-php"
     ],
     "homepage": "https://github.com/melhorenvio/shipment-sdk",
     "license": "MIT",
@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "php": "^7.1",
+        "php": "^5.6",
         "ext-json": "*",
         "guzzlehttp/guzzle": "^6.5"
     },
