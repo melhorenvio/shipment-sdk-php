@@ -11,17 +11,17 @@ Agora ficou mais fácil ter o serviço de cotações do Melhor Envio no seu proj
 
 * [Instalação](##Instalação)
 * [Cofiguração Inicial](##Configuração-Inicial)
-* [Exemplos de uso](##Pacotes)
-    * [Pacotes](##Pacotes)
-        * [Criação da calculadora](###Criando-a-instância-calculadora)
-        * [Montando o payload da calculadora](###Montando-o-payload-da-calculadora)
-            * [Adicionando CEPs de origem e destino](####Adicionando-CEPs-de-origem-e-destino)
-            * [Adicionando serviços adicionais](####Adicionando-serviços-adicionais)
-            * [Adicionando os pacotes para cotação](####Adicionando-os-pacotes-para-cotação)
-            * [Adicionando os serviços das transportadoras](####Adicionando-os-serviços-das-transportadoras)
-            * [Retornando a cotação](####Retornando-as-informações-da-cotação)
-    * [Produtos](##Produtos)
-        * []
+* [Exemplos de uso](##Criando-a-instância-calculadora)
+    * [Criação da calculadora](###Criando-a-instância-calculadora)
+    * [Montando o payload da calculadora](###Montando-o-payload-da-calculadora)
+    * [Adicionando CEPs de origem e destino](####Adicionando-CEPs-de-origem-e-destino)
+    * [Adicionando serviços adicionais](####Adicionando-serviços-adicionais)
+    * [Pacotes](###Pacotes)
+        * [Adicionando os pacotes para cotação](####Adicionando-os-pacotes-para-cotação)
+    * [Produtos](###Produtos)
+        * [Adicionando os produtos para cotação](###Adicionando-os-produtos-para-cotação)
+    * [Adicionando os serviços das transportadoras](####Adicionando-os-serviços-das-transportadoras)
+    * [Retornando a cotação](####Retornando-as-informações-da-cotação)
 
 
 ## Dependências
@@ -63,11 +63,7 @@ use MelhorEnvio\Enums\Environment;
 $shipment = new Shipment('your-token', Environment::PRODUCTION);
 ```
 
-## Pacotes
-
-Este exemplo consiste na cotação para pacotes.
-
-### Criando a instância calculadora
+## Criando a instância calculadora
 
 Neste exemplo você criará uma instância para calculadora no seu código.
 
@@ -76,9 +72,9 @@ Neste exemplo você criará uma instância para calculadora no seu código.
     $calculator = $shipment->calculator();
 ```
 
-### Montando o payload da calculadora
+## Montando o payload da calculadora
 
-#### Adicionando CEPs de origem e destino
+### Adicionando CEPs de origem e destino
 
 Nesta parte você deve definir os CEPs de origem e destino respectivamente. 
 
@@ -86,7 +82,7 @@ Nesta parte você deve definir os CEPs de origem e destino respectivamente.
 //Builds calculator payload
 $calculator->postalCode('01010010', '20271130');
 ```
-#### Adicionando serviços adicionais
+### Adicionando serviços adicionais
 
 Aqui você pode configurar alguns serviços adicionais na sua cotação, são eles:
 * Mão própria
@@ -100,6 +96,8 @@ Lembrando que a adição desses serviços podem gerar acréscimos no preço na h
     $calculator->setReceipt(false);
     $calculator->setCollect(false);
  ```
+
+### Pacotes
 
 #### Adicionando os pacotes para cotação
 
@@ -121,7 +119,30 @@ Lembrando que o valor segurado por padrão deve ser o valor do produto.
     );
 ```
 
-#### Adicionando os serviços das transportadoras
+### Produtos
+
+#### Adicionando os produtos para cotação
+
+Nesta parte, você define os produtos que servião para sua cotaçãom as informações que devem ser passadas como parâmetro são as seguintes:
+* Altura
+* Largura
+* Comprimento
+* Peso
+* Valor segurado
+* Quantidade
+
+Lembrando que o valor segurado por padrão deve ser o valor do produto.
+
+```php
+$calculator->addProducts(
+        new Product(uniqid(), 40, 30, 50, 10.00, 100.0, 1),
+        new Product(uniqid(), 5, 1, 10, 0.1, 50.0, 1)
+    );
+```
+
+**É importante ressaltar que sejam feita as montagens dos payloads de PACOTES e PRODUTOS em arquivos separados. Um para cada responsabilidade, como segue no projeto.**
+
+### Adicionando os serviços das transportadoras
 
 Aqui serão escolhidos os serviços das transportadoras que você deseja utilizar. Hoje, no Melhor Envio, estão disponíveis:
 * Correios
@@ -131,11 +152,15 @@ Aqui serão escolhidos os serviços das transportadoras que você deseja utiliza
 
 ```php
 $calculator->addServices(
-        Service::CORREIOS_PAC, Service::CORREIOS_SEDEX Service::JADLOG_PACKAGE, Service::JADLOG_COM, Service::AZULCARGO_AMANHA
+        Service::CORREIOS_PAC, 
+        Service::CORREIOS_SEDEX,
+        Service::JADLOG_PACKAGE, 
+        Service::JADLOG_COM, 
+        Service::AZULCARGO_AMANHA
     );
 ```
 
-#### Retornando as informações da cotação
+### Retornando as informações da cotação
 
 Aqui você retornará as informações do payload montado.
 
@@ -144,29 +169,6 @@ $quotations = $calculator->calculate();
 print_r($quotations);
 exit;
 ```
-
-
-
-## Produtos
-
-Este exemplo consiste na cotação para produtos
-
-### Criando a instância da calculadora 
-
-Neste exemplo você 
-```php
-
-```
-
-
-
-
-
-
-
-
-
-
 
 ### Testing
 
@@ -184,11 +186,11 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ### Security
 
-If you discover any security related issues, please email pedro.barros@melhorenvio.com instead of using the issue tracker.
+If you discover any security related issues, please email rodrigo.silveira@melhorenvio.com instead of using the issue tracker.
 
 ## Credits
 
-- [Pedro Barros](https://github.com/melhorenvio)
+- [Rodrigo Silveira](https://github.com/melhorenvio)
 - [All Contributors](../../contributors)
 
 ## License
