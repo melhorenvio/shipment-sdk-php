@@ -1,14 +1,16 @@
-# Contributing
+# Contribuindo com o Shipment-sdk-php - Melhor Envio
 
-Contributions are **welcome** and will be fully **credited**.
+Contribuições são **bem-vindas** e serão dados os devidos **créditos**.
 
-Please read and understand the contribution guide before creating an issue or pull request.
+Por favor leia e entenda o guia de contribuição antes de criar uma *issue* ou *pull request*.
 
-## Etiquette
+## Etiqueta
 
 This project is open source, and as such, the maintainers give their free time to build and maintain the source code
 held within. They make the code freely available in the hope that it will be of use to other developers. It would be
 extremely unfair for them to suffer abuse or anger for their hard work.
+
+Este projeto é *código aberto* 
 
 Please be considerate towards maintainers when raising issues or presenting pull requests. Let's show the
 world that developers are civilized and selfless people.
