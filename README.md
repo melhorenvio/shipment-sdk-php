@@ -93,6 +93,7 @@ Lembrando que a adição desses serviços podem gerar acréscimos no preço na h
 
 
  ```php
+ 
     $calculator->setOwnHand();
     $calculator->setReceipt(false);
     $calculator->setCollect(false);
