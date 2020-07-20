@@ -51,7 +51,7 @@ Lembrando que só será válido, se a criação do token pertencer ao mesmo ambi
 
 Se você ainda não possui token, você pode criá-lo [aqui](%https://melhorenvio.com.br/painel/gerenciar/tokens%).
 
-``` php
+```php
 require "vendor/autoload.php";
 
 use MelhorEnvio\Shipment;
@@ -78,7 +78,7 @@ Neste exemplo você criará uma instância para calculadora no seu código.
 
 Nesta parte você deve definir os CEPs de origem e destino respectivamente. 
 
-``` php
+```php
 //Builds calculator payload
 $calculator->postalCode('01010010', '20271130');
 ```
@@ -91,7 +91,7 @@ Aqui você pode configurar alguns serviços adicionais na sua cotação, são el
 
 Lembrando que a adição desses serviços podem gerar acréscimos no preço na hora da cotação.
 
- ``` php
+ ```php
     $calculator->setOwnHand();
     $calculator->setReceipt(false);
     $calculator->setCollect(false);
