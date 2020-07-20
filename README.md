@@ -85,6 +85,7 @@ $calculator->postalCode('01010010', '20271130');
 ### Adicionando serviços adicionais
 
 Aqui você pode configurar alguns serviços adicionais na sua cotação, são eles:
+
 * Mão própria
 * Aviso de recebimento
 * Coleta
