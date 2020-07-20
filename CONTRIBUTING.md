@@ -2,56 +2,50 @@
 
 Contribuições são **bem-vindas** e serão dados os devidos **créditos**.
 
+Ajude a manter o Shipment-sdk-php do Melhor Envio aberto e inclusivo.
+
 Por favor leia e entenda o guia de contribuição antes de criar uma *issue* ou *pull request*.
 
 ## Etiqueta
 
-This project is open source, and as such, the maintainers give their free time to build and maintain the source code
-held within. They make the code freely available in the hope that it will be of use to other developers. It would be
-extremely unfair for them to suffer abuse or anger for their hard work.
+Este projeto é *código aberto* e como tal, nossa equipe se dedica sempre para criar e manter o *código fonte* funcionando. Disponibilizamos o código gratuitamente na esperança que seja útil para outros desenvolvedores. Seria extremamento injusto se sofressemos com abuso ou raiva pelo empenho no nosso trabalho.
 
-Este projeto é *código aberto* 
+Seja atencioso com nossa equipe ao levantar problemas e fazer *pull requets*. Assim podemos mostrar ao mundo que desenvolvedores são pessoas civilizadas e altruístas.
 
-Please be considerate towards maintainers when raising issues or presenting pull requests. Let's show the
-world that developers are civilized and selfless people.
+É dever do desenvolvedor responsável pelo projeto, garantir que todos os *pull requests* tenham qualidade suficiente para beneficar o projeto. Muitos desenvolvendores possuem habilidades diferentes, fortes e fracas. Portanto não fique chateado(a), se seu *pull request* não for utilizado no projeto.
 
-It's the duty of the maintainer to ensure that all submissions to the project are of sufficient
-quality to benefit the project. Many developers have different skillsets, strengths, and weaknesses. Respect the maintainer's decision, and do not be upset or abusive if your submission is not used.
+## Viabilidade
 
-## Viability
+Ao submeter novas *features*, primeiro considere se será útil para outras pessoas. Projetos *open Source*  são usados por muitos desenvolvedores, que podem ter necessidades muito diferentes das suas. Verifique se sua *feature* será usado ou não por outros usuários do projeto.
 
-When requesting or submitting new features, first consider whether it might be useful to others. Open
-source projects are used by many developers, who may have entirely different needs to your own. Think about
-whether or not your feature is likely to be used by other users of the project.
+## Procedimento
 
-## Procedure
+Antes de registrar um problema: 
 
-Before filing an issue:
+- Tente replicar o problema, para garantir que não foi um incidente coincidente.
+- Verifique se a sugestão da sua *feature* ainda não está presente no projeto.
+- Verfique a lista de *pull requests* para garantir que o bug não tenha nenhuma correção em andamento.
+- Verifique a lista de *pull requests* para garantir que a *feature* não está em andamento.
 
-- Attempt to replicate the problem, to ensure that it wasn't a coincidental incident.
-- Check to make sure your feature suggestion isn't already present within the project.
-- Check the pull requests tab to ensure that the bug doesn't have a fix in progress.
-- Check the pull requests tab to ensure that the feature isn't already in progress.
+Antes de fazer um *pull request*:
 
-Before submitting a pull request:
+- Verifique o código base para garantir que sua *feature* ainda não exista.
+- Verifique a lista de *pull requests* para garantir que outra pessoa ainda não tenha enviado a *feature* ou *fix*.
 
-- Check the codebase to ensure that your feature doesn't already exist.
-- Check the pull requests to ensure that another person hasn't already submitted the feature or fix.
+## Requisitos
 
-## Requirements
-
-If the project maintainer has any additional requirements, you will find them listed here.
+Se os desenvolvedores do projeto tiverem requisitos adicionais, você encontrará listados a seguir: 
 
 - **[PSR-2 Coding Standard](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)** - The easiest way to apply the conventions is to install [PHP Code Sniffer](https://pear.php.net/package/PHP_CodeSniffer).
 
-- **Add tests!** - Your patch won't be accepted if it doesn't have tests.
+- **Adicione testes!** - Seu pacote não será aceito se não tiver testes.
 
-- **Document any change in behaviour** - Make sure the `README.md` and any other relevant documentation are kept up-to-date.
+- **Documente qualquer mudança de comportamento do pacote.** - Verifique se o `README.md`  e qualquer outra documentação relevante estão atualizados.
 
-- **Consider our release cycle** - We try to follow [SemVer v2.0.0](https://semver.org/). Randomly breaking public APIs is not an option.
+- **Considere o nosso ciclo de lançamento** - Nós tentamos seguir o  [SemVer v2.0.0](https://semver.org/). Quebrar APIs públicas aleatóriamente não é uma opção.
 
-- **One pull request per feature** - If you want to do more than one thing, send multiple pull requests.
+- **Um *pull request* por feature** - Se você quiser fazer mais de uma contribuição, envie mais *pull requests*.
 
-- **Send coherent history** - Make sure each individual commit in your pull request is meaningful. If you had to make multiple intermediate commits while developing, please [squash them](https://www.git-scm.com/book/en/v2/Git-Tools-Rewriting-History#Changing-Multiple-Commit-Messages) before submitting.
+- **Enviar histório coerente** - Verifique se cada *commit* em seu *pull request* é significativo. Se você fizer vários *commits* intermediários enquanto desenvolve a *feature* ou *fix*, por favor [destrua-os](https://www.git-scm.com/book/en/v2/Git-Tools-Rewriting-History#Changing-Multiple-Commit-Messages) antes de submeter.
 
-**Happy coding**!
+**Bom desenvolvimento e programe com responsabilidade, atenciosamente, Melhor Envio - Time de tecnologia.**
