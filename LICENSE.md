@@ -19,3 +19,9 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+É concedida a permissão, gratuitamente, a qualquer pessoa que obtenha uma cópia deste *software* e dos arquivos de documentação associados (ao "*Software*"), para lidar no *software* sem restrição, incluindo, sem limitação, os direitos de usar, copiar, modificar, mesclar, publicar, distribuir, sublienciar e/ou  vender cópias do *software* e permitir pessoas a quem o *software* está fornecido para tal, sujeito às seguintes condições: 
+
+O aviso de direitos autorais acima e este aviso de permissão devem ser incluídos em todas as cópias ou partes substanciais do *software*.
+
+O *SOFTWARE* É FORNECIDO "TAL COMO ESTÁ", SEM GARANTIA DE QUALQUER TIPO EXPRESSA OU IMPLÍCITA, INCLUINDO MAS NÃO SE LIMITANDO A GARANTIAS DE COMERCIALIZAÇÃO, APTIDÃO PARA UM OBJETIVO ESPECÍFICO E NÃO INFRACÇÃO. EM NENHUM CASO OS AUTORES E TITULARES DOS DIREITOS AUTORAIS SÃO RESPONSÁVEIS POR QUALQUER RECLAMAÇÃO, DANOS OU RESPONSABILIDADE, SEJA EM AÇÃO DE CONTRATO, *TORT* OU DE OUTRA FORMA, DECORRENTE DE, COM OU SEM CONEXÃO COM O *SOFTWARE* OU O USO DE OUTRAS FORMAS DE NEGÓCIO NO *SOFTWARE*.

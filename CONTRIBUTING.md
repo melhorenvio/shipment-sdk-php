@@ -6,6 +6,13 @@ Ajude a manter o Shipment-sdk-php do Melhor Envio aberto e inclusivo.
 
 Por favor leia e entenda o guia de contribuição antes de criar uma *issue* ou *pull request*.
 
+* [Etiqueta](##Etiqueta)
+* [Viabilidade](##Viabilidade)
+* [Procedimento](##Procedimento)
+* [Requisitos](##Requisitos)
+
+
+
 ## Etiqueta
 
 Este projeto é *código aberto* e como tal, nossa equipe se dedica sempre para criar e manter o *código fonte* funcionando. Disponibilizamos o código gratuitamente na esperança que seja útil para outros desenvolvedores. Seria extremamento injusto se sofressemos com abuso ou raiva pelo empenho no nosso trabalho.
@@ -36,7 +43,7 @@ Antes de fazer um *pull request*:
 
 Se os desenvolvedores do projeto tiverem requisitos adicionais, você encontrará listados a seguir: 
 
-- **[PSR-2 Coding Standard](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)** - The easiest way to apply the conventions is to install [PHP Code Sniffer](https://pear.php.net/package/PHP_CodeSniffer).
+- **[PSR-2 Coding Standard](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)** - A maneira mais fácil de aplicar essas convenções, é instalar o [PHP Code Sniffer](https://pear.php.net/package/PHP_CodeSniffer).
 
 - **Adicione testes!** - Seu pacote não será aceito se não tiver testes.
 
