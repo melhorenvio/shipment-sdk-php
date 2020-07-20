@@ -102,6 +102,7 @@ $calculator->setCollect(false);
 #### Adicionando os pacotes para cotação
 
 Nesta parte, você define os pacotes que servirão para sua cotação, as informações que devem ser passadas como parâmetro são as seguintes:
+
 * Altura
 * Largura
 * Comprimento
