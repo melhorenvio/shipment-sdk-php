@@ -126,6 +126,7 @@ Lembrando que o valor segurado por padrão deve ser o valor do produto.
 #### Adicionando os produtos para cotação
 
 Nesta parte, você define os produtos que servião para sua cotaçãom as informações que devem ser passadas como parâmetro são as seguintes:
+
 * Altura
 * Largura
 * Comprimento
@@ -147,6 +148,7 @@ $calculator->addProducts(
 ### Adicionando os serviços das transportadoras
 
 Aqui serão escolhidos os serviços das transportadoras que você deseja utilizar. Hoje, no Melhor Envio, estão disponíveis:
+
 * Correios
 * Jadlog
 * Via Brasil
