@@ -92,10 +92,10 @@ Aqui você pode configurar alguns serviços adicionais na sua cotação, são el
 Lembrando que a adição desses serviços podem gerar acréscimos no preço na hora da cotação.
 
  ```php
-    $calculator->setOwnHand();
-    $calculator->setReceipt(false);
-    $calculator->setCollect(false);
- ```
+$calculator->setOwnHand();
+$calculator->setReceipt(false);
+$calculator->setCollect(false);
+``` 
 
 ### Pacotes
 
