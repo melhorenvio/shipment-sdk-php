@@ -15,7 +15,7 @@ Por favor leia e entenda o guia de contribuição antes de criar uma *issue* ou 
 
 ## Etiqueta
 
-Este projeto é *código aberto* e como tal, nossa equipe se dedica sempre para criar e manter o *código fonte* funcionando. Disponibilizamos o código gratuitamente na esperança que seja útil para outros desenvolvedores. Seria extremamento injusto se sofressemos com abuso ou raiva pelo empenho no nosso trabalho.
+Este projeto é **código aberto** e como tal, nossa equipe se dedica sempre para criar e manter o **código fonte** funcionando. Disponibilizamos o código gratuitamente na esperança que seja útil para outros desenvolvedores. Seria extremamento injusto se sofressemos com abuso ou raiva pelo empenho no nosso trabalho.
 
 Seja atencioso com nossa equipe ao levantar problemas e fazer *pull requets*. Assim podemos mostrar ao mundo que desenvolvedores são pessoas civilizadas e altruístas.
 
