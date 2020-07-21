@@ -7,7 +7,7 @@
 
 Agora ficou mais fácil ter o serviço de cotações do Melhor Envio no seu projeto de e-commerce.
 
-##Índice
+## Índice
 
 * [Instalação](##Instalação)
 * [Cofiguração Inicial](##configuração-inicial)
@@ -41,7 +41,7 @@ Agora ficou mais fácil ter o serviço de cotações do Melhor Envio no seu proj
 * phpunit/phpunit >= 5
 
 
-##Instalação
+## Instalação
 
 Você pode instalar o pacote via composer, rodando o seguinte comando:
 
@@ -49,7 +49,7 @@ Você pode instalar o pacote via composer, rodando o seguinte comando:
 composer require melhorenvio/shipment-sdk-php
 ```
 
-##Configuração inicial
+## Configuração inicial
 
 A instância criada de Shipment permite que você passe como parâmetros o seu token e o ambiente que você trabalhará, assim terá a autenticação pronta. 
 
@@ -69,7 +69,7 @@ use MelhorEnvio\Enums\Environment;
 $shipment = new Shipment('your-token', Environment::PRODUCTION);
 ```
 
-##Criando a instância calculadora
+## Criando a instância calculadora
 
 Neste exemplo você criará uma instância para calculadora no seu código.
 
@@ -78,9 +78,9 @@ Neste exemplo você criará uma instância para calculadora no seu código.
     $calculator = $shipment->calculator();
 ```
 
-##Montando o payload da calculadora
+## Montando o payload da calculadora
 
-###Adicionando CEPs de origem e destino
+### Adicionando CEPs de origem e destino
 
 Nesta parte você deve definir os CEPs de origem e destino respectivamente. 
 
@@ -89,9 +89,9 @@ Nesta parte você deve definir os CEPs de origem e destino respectivamente.
 $calculator->postalCode('01010010', '20271130');
 ```
 
-###Produtos
+### Produtos
 
-####Adicionando os produtos para cotação
+#### Adicionando os produtos para cotação
 
 Nesta parte, você define os produtos que servião para sua cotaçãom as informações que devem ser passadas como parâmetro são as seguintes:
 
@@ -111,9 +111,9 @@ $calculator->addProducts(
     );
 ```
 
-###Pacotes
+### Pacotes
 
-####Adicionando os pacotes para cotação
+#### Adicionando os pacotes para cotação
 
 Nesta parte, você define os pacotes que servirão para sua cotação, as informações que devem ser passadas como parâmetro são as seguintes:
 
@@ -138,7 +138,7 @@ Lembrando que o valor segurado por padrão deve ser o valor do produto em Reais.
 
 **É importante ressaltar que os métodos de PACOTES e PRODUTOS não poderão ser utilizados conjuntamente, devendo ser utilizado apenas um ou outro.**
 
-###Adicionando os serviços das transportadoras
+### Adicionando os serviços das transportadoras
 
 Se você desejar customizar, nesta parte serão escolhidos os serviços das transportadoras que você deseja utilizar. Hoje, no Melhor Envio, estão disponíveis:
 
@@ -157,7 +157,7 @@ $calculator->addServices(
     );
 ```
 
-###Adicionando serviços adicionais
+### Adicionando serviços adicionais
 
 Se você desejar customizar, pode configurar alguns serviços adicionais na sua cotação, são eles:
 
@@ -174,7 +174,7 @@ $calculator->setCollect();
 ``` 
 
 
-###Retornando as informações da cotação
+### Retornando as informações da cotação
 
 Aqui você retornará as informações do payload montado.
 
@@ -182,34 +182,34 @@ Aqui você retornará as informações do payload montado.
 $quotations = $calculator->calculate();
 ```
 
-###Mais exemplos
+### Mais exemplos
 
 [Aqui você pode acessar mais exemplos de implementação](/examples)
 
-###Testes
+### Testes
 
 ``` bash
 composer test
 ```
 
-###Changelog
+### Changelog
 
 Consulte [CHANGELOG](CHANGELOG.md) para mais informações de alterações recentes.
 
-##Contribuindo
+## Contribuindo
 
 Consulte [CONTRIBUTING](CONTRIBUTING.md) para mais detalhes.
 
-###Segurança
+### Segurança
 
 Se você descobrir algum problema de segurança, por favor, envie um e-mail para tecnologia@melhorenvio.com, ao invés de usar um 'issue tracker'.
 
-##Créditos
+## Créditos
 
 - [Rodrigo Silveira](https://github.com/rodriigogs)
 - [Marçal Pizzi](https://github.com/marcalpizzi)
 - [Pedro Barros](https://github.com/pedrobarros05)
 
-##Licença
+## Licença
 
 Melhor Envio. Consulte [Arquivo de lincença](LICENSE.md) para mais informações.
