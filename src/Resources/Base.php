@@ -22,7 +22,7 @@ abstract class Base implements Resource
     protected $environment;
 
     /**
-     * @var ClientInterface Client
+     * @var ClientInterface
      */
     protected $http;
 

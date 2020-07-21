@@ -8,13 +8,25 @@ use InvalidArgumentException;
 
 abstract class Volume implements Arrayable
 {
+    /**
+     * @var int|float
+     */
     protected $height;
+    /**
+     * @var int|float
+     */
     protected $width;
+    /**
+     * @var int|float
+     */
     protected $length;
+    /**
+     * @var int|float
+     */
     protected $weight;
 
     /**
-     * @return mixed
+     * @return int|float
      */
     public function getWeight()
     {
@@ -22,7 +34,7 @@ abstract class Volume implements Arrayable
     }
 
     /**
-     * @param mixed $weight
+     * @param int|float $weight
      */
     public function setWeight($weight)
     {
@@ -32,7 +44,7 @@ abstract class Volume implements Arrayable
     }
 
     /**
-     * @return mixed
+     * @return int|float
      */
     public function getLength()
     {
@@ -50,7 +62,7 @@ abstract class Volume implements Arrayable
     }
 
     /**
-     * @return mixed
+     * @return int|float
      */
     public function getWidth()
     {
@@ -58,7 +70,7 @@ abstract class Volume implements Arrayable
     }
 
     /**
-     * @param mixed $width
+     * @param int|float $width
      */
     public function setWidth($width)
     {
@@ -68,7 +80,7 @@ abstract class Volume implements Arrayable
     }
 
     /**
-     * @return mixed
+     * @return int|float
      */
     public function getHeight()
     {
@@ -76,7 +88,7 @@ abstract class Volume implements Arrayable
     }
 
     /**
-     * @param mixed $height
+     * @param int|float $height
      */
     public function setHeight($height)
     {

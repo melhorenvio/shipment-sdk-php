@@ -6,9 +6,9 @@ use Exception;
 
 abstract class ClientException extends Exception
 {
-    public function __construct(Exception $e)
+    public function __construct(\GuzzleHttp\Exception\ClientException $exception)
     {
-        $response = $e->getResponse();
+        $response = $exception->getResponse();
 
         parent::__construct($response->getBody()->getContents(), $response->getStatusCode());
     }

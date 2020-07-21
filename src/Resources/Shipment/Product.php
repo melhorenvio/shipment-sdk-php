@@ -17,7 +17,7 @@ class Product extends Volume
     protected $id;
 
     /**
-     * @var float
+     * @var int|float
      */
     protected $insuranceValue;
 
@@ -49,7 +49,7 @@ class Product extends Volume
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getId()
     {
@@ -65,7 +65,7 @@ class Product extends Volume
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getQuantity()
     {
@@ -73,7 +73,7 @@ class Product extends Volume
     }
 
     /**
-     * @param mixed $quantity
+     * @param int $quantity
      */
     public function setQuantity($quantity)
     {
@@ -85,7 +85,7 @@ class Product extends Volume
     }
 
     /**
-     * @return mixed
+     * @return int|float
      */
     public function getInsuranceValue()
     {
@@ -93,7 +93,7 @@ class Product extends Volume
     }
 
     /**
-     * @param mixed $insuranceValue
+     * @param int|float $insuranceValue
      */
     public function setInsuranceValue($insuranceValue)
     {

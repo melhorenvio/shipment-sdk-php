@@ -27,7 +27,7 @@ try {
 
     $quotations = $calculator->calculate();
 } catch (Exception $exception) {
-    die($exception);
+    //Proper exception context
 }
 
 print_r($quotations);

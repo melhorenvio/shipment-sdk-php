@@ -7,21 +7,21 @@ class Environment
 {
     /**
      * Available Environments
-     * @const array
+     * @var array
      */
     const ENVIRONMENTS = [
-        'production', 'sandbox',
+        self::PRODUCTION, self::SANDBOX,
     ];
 
     /**
      * Production environment
-     * @const string
+     * @var string
      */
     const PRODUCTION ='production';
 
     /**
      * Sandbox environment
-     * @const string
+     * @var string
      */
     const SANDBOX ='sandbox';
 }

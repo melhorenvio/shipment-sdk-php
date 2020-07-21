@@ -6,7 +6,7 @@ class Endpoint
 {
     /**
      * API Endpoint
-     * @const array
+     * @var array
      */
     const ENDPOINTS = [
         'production' => 'https://melhorenvio.com.br',
@@ -15,7 +15,7 @@ class Endpoint
 
     /**
      * API Version
-     * @const array
+     * @var array
      */
     const VERSIONS = [
         'production' => 'v2',
@@ -24,13 +24,13 @@ class Endpoint
 
     /**
      * Production endpoint
-     * @const string
+     * @var string
      */
     const PRODUCTION = self::ENDPOINTS['production'];
 
     /**
      * Sandbox endpoint
-     * @const string
+     * @var string
      */
     const SANDBOX = self::ENDPOINTS['sandbox'];
 }

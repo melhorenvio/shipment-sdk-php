@@ -5,7 +5,7 @@ namespace MelhorEnvio\Resources\Shipment;
 class Package extends Volume
 {
     /**
-     * @var int
+     * @var int|float
      */
     protected $insurance;
 
@@ -28,7 +28,7 @@ class Package extends Volume
     }
 
     /**
-     * @return mixed
+     * @return int|float
      */
     public function getInsurance()
     {
@@ -36,7 +36,7 @@ class Package extends Volume
     }
 
     /**
-     * @param mixed $insurance
+     * @param int|float $insurance
      */
     public function setInsurance($insurance)
     {

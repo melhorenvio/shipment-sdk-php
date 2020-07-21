@@ -41,7 +41,7 @@ try {
     // Performs calculation
     $quotations = $calculator->calculate();
 } catch (Exception $exception) {
-    die($exception);
+    //Proper exception context
 }
 
 foreach ($quotations as $quotation) {
