@@ -15,12 +15,12 @@ Agora ficou mais fácil ter o serviço de cotações do Melhor Envio no seu proj
     * [Criação da calculadora](###Criando-a-instância-calculadora)
     * [Montando o payload da calculadora](###Montando-o-payload-da-calculadora)
     * [Adicionando CEPs de origem e destino](####Adicionando-CEPs-de-origem-e-destino)
-    * [Adicionando serviços adicionais](####Adicionando-serviços-adicionais)
-    * [Pacotes](###Pacotes)
-        * [Adicionando os pacotes para cotação](####Adicionando-os-pacotes-para-cotação)
     * [Produtos](###Produtos)
         * [Adicionando os produtos para cotação](###Adicionando-os-produtos-para-cotação)
+    * [Pacotes](###Pacotes)
+        * [Adicionando os pacotes para cotação](####Adicionando-os-pacotes-para-cotação)
     * [Adicionando os serviços das transportadoras](####Adicionando-os-serviços-das-transportadoras)
+    * [Adicionando serviços adicionais](####Adicionando-serviços-adicionais)
     * [Retornando a cotação](####Retornando-as-informações-da-cotação)
 
 
@@ -82,44 +82,6 @@ Nesta parte você deve definir os CEPs de origem e destino respectivamente.
 //Builds calculator payload
 $calculator->postalCode('01010010', '20271130');
 ```
-### Adicionando serviços adicionais
-
-Aqui você pode configurar alguns serviços adicionais na sua cotação, são eles:
-
-* Mão própria
-* Aviso de recebimento
-* Coleta
-
-Lembrando que a adição desses serviços podem gerar acréscimos no preço na hora da cotação.
-
-```php
-$calculator->setOwnHand();
-$calculator->setReceipt(false);
-$calculator->setCollect(false);
-``` 
-
-### Pacotes
-
-#### Adicionando os pacotes para cotação
-
-Nesta parte, você define os pacotes que servirão para sua cotação, as informações que devem ser passadas como parâmetro são as seguintes:
-
-* Altura
-* Largura
-* Comprimento
-* Peso
-* Valor segurado
-
-Lembrando que o valor segurado por padrão deve ser o valor do produto.
-
-```php
- $calculator->addPackages(
-        new Package(12, 4, 17, 0.1, 6.0),
-        new Package(12, 4, 17, 0.1, 6.0),
-        new Package(12, 4, 17, 0.1, 6.0),
-        new Package(12, 4, 17, 0.1, 6.0)
-    );
-```
 
 ### Produtos
 
@@ -143,11 +105,36 @@ $calculator->addProducts(
     );
 ```
 
-**É importante ressaltar que sejam feitas as montagens dos payloads de PACOTES e PRODUTOS em arquivos separados. Um para cada responsabilidade, como segue no projeto.**
+### Pacotes
+
+#### Adicionando os pacotes para cotação
+
+Nesta parte, você define os pacotes que servirão para sua cotação, as informações que devem ser passadas como parâmetro são as seguintes:
+
+* Altura
+* Largura
+* Comprimento
+* Peso
+* Valor segurado
+
+**As dimensões sempre devem ser passadas em centímetros e o peso em quilogramas. São as unidades que o Melhor Envio opera.**
+
+Lembrando que o valor segurado por padrão deve ser o valor do produto em Reais.
+
+```php
+ $calculator->addPackages(
+        new Package(12, 4, 17, 0.1, 6.0),
+        new Package(12, 4, 17, 0.1, 6.0),
+        new Package(12, 4, 17, 0.1, 6.0),
+        new Package(12, 4, 17, 0.1, 6.0)
+    );
+```
+
+**É importante ressaltar que os métodos de PACOTES e PRODUTOS não poderão ser utilizados conjuntamente, devendo ser utilizado apenas um ou outro.**
 
 ### Adicionando os serviços das transportadoras
 
-Aqui serão escolhidos os serviços das transportadoras que você deseja utilizar. Hoje, no Melhor Envio, estão disponíveis:
+Se você desejar customizar, nesta parte serão escolhidos os serviços das transportadoras que você deseja utilizar. Hoje, no Melhor Envio, estão disponíveis:
 
 * Correios
 * Jadlog
@@ -164,14 +151,29 @@ $calculator->addServices(
     );
 ```
 
+### Adicionando serviços adicionais
+
+Se você desejar customizar, pode configurar alguns serviços adicionais na sua cotação, são eles:
+
+* Mão própria
+* Aviso de recebimento
+* Coleta
+
+Lembrando que a adição desses serviços podem gerar acréscimos no preço na hora da cotação.
+
+```php
+$calculator->setOwnHand();
+$calculator->setReceipt();
+$calculator->setCollect();
+``` 
+
+
 ### Retornando as informações da cotação
 
 Aqui você retornará as informações do payload montado.
 
 ```php
 $quotations = $calculator->calculate();
-print_r($quotations);
-exit;
 ```
 
 ### Mais exemplos
@@ -200,7 +202,8 @@ Se você descobrir algum problema de segurança, por favor, envie um e-mail para
 
 - [Rodrigo Silveira](https://github.com/melhorenvio)
 - [Marçal Pizzi](https://github.com/melhorenvio)
+- [Pedro Barros](https://github.com/melhorenvio)
 
 ## Licença
 
-MIT License (MIT). Consulte [Arquivo de lincença](LICENSE.md) para mais informações.
+Melhor Envio. Consulte [Arquivo de lincença](LICENSE.md) para mais informações.
