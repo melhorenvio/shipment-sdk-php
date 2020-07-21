@@ -207,7 +207,7 @@ Se você descobrir algum problema de segurança, por favor, envie um e-mail para
 ##Créditos
 
 - [Rodrigo Silveira](https://github.com/rodriigogs)
-- [Marçal Pizzi](https://github.com/melhorenvio)
+- [Marçal Pizzi](https://github.com/marcalpizzi)
 - [Pedro Barros](https://github.com/pedrobarros05)
 
 ##Licença
