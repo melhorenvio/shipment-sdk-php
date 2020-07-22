@@ -9,7 +9,7 @@ Agora ficou mais fácil ter o serviço de cotações do Melhor Envio no seu proj
 
 ## Índice
 
-* [Instalação](##Instalação)
+* [Instalação](#instalacao)
 * [Cofiguração Inicial](##configuração-inicial)
 * [Exemplos de uso](##Criando-a-instância-calculadora)
     * [Criação da calculadora](###Criando-a-instância-calculadora)
@@ -202,7 +202,7 @@ Consulte [CONTRIBUTING](CONTRIBUTING.md) para mais detalhes.
 
 ### Segurança
 
-Se você descobrir algum problema de segurança, por favor, envie um e-mail para tecnologia@melhorenvio.com, ao invés de usar um 'issue tracker'.
+Se você descobrir algum problema de segurança, por favor, envie um e-mail para tecnologia@melhorenvio.com, ao invés de usar um *issue tracker*.
 
 ## Créditos
 
