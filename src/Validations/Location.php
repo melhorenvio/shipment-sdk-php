@@ -10,6 +10,6 @@ class Location
      */
     public static function isPostalCode($postalCode)
     {
-        return (bool) preg_match("/^[0-9]{8}/", trim($postalCode));
+        return (bool) preg_match("/^[0-9]{8}/", $postalCode);
     }
 }

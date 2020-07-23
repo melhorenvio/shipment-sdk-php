@@ -35,6 +35,14 @@ abstract class Base implements Resource
         $this->token = $token;
 
         $this->setEnvironment($environment ? $environment : Environment::SANDBOX);
+
+        $this->http = new Client([
+            'base_uri' => Endpoint::ENDPOINTS[$this->environment] . '/api/' . Endpoint::VERSIONS[$this->environment] . '/',
+            'headers' => [
+                'Authorization' => 'Bearer ' . $this->token,
+                'Accept'        => 'application/json',
+            ]
+        ]);
     }
 
     /**
@@ -64,17 +72,7 @@ abstract class Base implements Resource
      */
     public function getHttp()
     {
-        if ($this->http) {
-            return $this->http;
-        }
-
-        return $this->http = new Client([
-            'base_uri' => Endpoint::ENDPOINTS[$this->environment] . '/api/' . Endpoint::VERSIONS[$this->environment] . '/',
-            'headers' => [
-                'Authorization' => 'Bearer ' . $this->token,
-                'Accept'        => 'application/json',
-            ]
-        ]);
+        return $this->http;
     }
 
     /**
