@@ -39,7 +39,7 @@ class Service
      */
     const LATAMCARGO_PROXIMODIA = 10;
     const LATAMCARGO_PROXIMOVOO = 11;
-    const LATAMCARGO_CONVENCIONAL = 12;
+    const LATAMCARGO_JUNTOS = 12;
 
     /**
      * Services - AZUL CARGO
