@@ -12,14 +12,17 @@ abstract class Volume implements Arrayable
      * @var int|float
      */
     protected $height;
+
     /**
      * @var int|float
      */
     protected $width;
+
     /**
      * @var int|float
      */
     protected $length;
+
     /**
      * @var int|float
      */

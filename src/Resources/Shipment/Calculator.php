@@ -39,7 +39,7 @@ class Calculator
     }
 
     /**
-     * @param $postalCode
+     * @param int|string $postalCode
      * @throws InvalidArgumentException
      */
     public function from($postalCode)
@@ -48,7 +48,7 @@ class Calculator
     }
 
     /**
-     * @param $postalCode
+     * @param int|string $postalCode
      * @throws InvalidArgumentException
      */
     public function to($postalCode)
@@ -81,7 +81,7 @@ class Calculator
     }
 
     /**
-     * @param $products
+     * @param array $products
      * @throws InvalidArgumentException
      */
     public function addProducts($products)
@@ -94,7 +94,7 @@ class Calculator
     }
 
     /**
-     * @param $packages
+     * @param array $packages
      * @throws InvalidArgumentException
      */
     public function addPackages($packages)
@@ -133,7 +133,7 @@ class Calculator
     }
 
     /**
-     * @param $services
+     * @param array $services
      * @throws InvalidArgumentException
      */
     public function addServices($services)
@@ -164,7 +164,7 @@ class Calculator
 
     /**
      * Add Receipt in payload options
-     * @param $receipt
+     * @param bool $receipt
      * @throws InvalidArgumentException
      */
     public function setReceipt($receipt = true)
@@ -178,7 +178,7 @@ class Calculator
 
     /**
      * Add own hand in payload options
-     * @param $ownHand
+     * @param bool $ownHand
      * @throws InvalidArgumentException
      */
     public function setOwnHand($ownHand = true)
