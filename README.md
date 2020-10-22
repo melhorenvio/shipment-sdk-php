@@ -93,7 +93,7 @@ $calculator->postalCode('01010010', '20271130');
 
 #### Adicionando os produtos para cotação
 
-Nesta parte, você define os produtos que servião para sua cotaçãom as informações que devem ser passadas como parâmetro são as seguintes:
+Nesta parte, você irá definir os produtos que servirão para a sua cotação as informações que devem ser passadas como parâmetro são as seguintes:
 
 * Altura
 * Largura
@@ -115,7 +115,7 @@ $calculator->addProducts(
 
 #### Adicionando os pacotes para cotação
 
-Nesta parte, você define os pacotes que servirão para sua cotação, as informações que devem ser passadas como parâmetro são as seguintes:
+Nesta parte, você irá definir os pacotes que servirão para sua cotação, as informações que devem ser passadas como parâmetro são as seguintes:
 
 * Altura
 * Largura

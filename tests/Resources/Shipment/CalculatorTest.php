@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 
 class CalculatorTest extends TestCase
 {
-    public function setUp()
+    protected function setUp()
     {
         parent::setUp();
     }
@@ -23,7 +23,6 @@ class CalculatorTest extends TestCase
         $response->method('getPayload');
 
         $clientStub = $this->createMock(ClientInterface::class);
-
         $clientStub->method('send')->willReturn($response);
 
         $resourceStub = $this->createMock(Resource::class);
