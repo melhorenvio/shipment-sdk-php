@@ -27,7 +27,6 @@ class CalculatorTest extends TestCase
 
         $resourceStub = $this->createMock(Resource::class);
         $resourceStub->method('getHttp')->willReturn($clientStub);
-
     }
 
     /**
