@@ -188,8 +188,16 @@ $quotations = $calculator->calculate();
 
 ### Testes
 
+Dentro do projeto você encontrará alguns documentos de teste baseados em testes unitários
+
+
+Você pode usar na aplicação tanto o comando:
 ``` bash
 composer test
+```
+Quanto o comando:
+```bash
+vendor/bin/phpunit tests 
 ```
 
 ### Changelog
