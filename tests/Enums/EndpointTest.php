@@ -10,6 +10,10 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
 
+
+/**
+ * This test is a example for consult
+ */
 class EndpointTest extends TestCase
 {
     /**
@@ -20,7 +24,7 @@ class EndpointTest extends TestCase
     protected function setUp()
     {
         $mockHandler = new MockHandler([
-            new Response(200, ['Foo' => 'Bar'], 'Hello'),
+            new Response(200, ['Foo' => 'Bar'], 'ResponseContext'),
             new RequestException('Communicating with server failed', new Request('POST', 'https://sandbox.melhorenvio.com.br'))
         ]);
 
@@ -36,7 +40,7 @@ class EndpointTest extends TestCase
     /**
      * @test
      */
-    public function is_valid_endpoint_production()
+    public function is_valid_endpoint_sandbox()
     {
         $response = $this->client->post('https://sandbox.melhorenvio.com.br', array(
             'request.options' => array(
