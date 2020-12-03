@@ -41,7 +41,7 @@ class CalculatorTest extends TestCase
     /**
      * @test
      */
-    public function is_valid_calculate()
+    public function isValidCalculate()
     {
 
         $response = $this->client->request('POST', 'me/shipment/calculate');
@@ -63,7 +63,7 @@ class CalculatorTest extends TestCase
     /**
      * @test
      */
-    public function is_invalid_calculate()
+    public function isInvalidCalculate()
     {
         $clientStub = $this->createMock(Client::class);
         $clientStub->method('send')->willReturn(function () { throw new \Exception; });

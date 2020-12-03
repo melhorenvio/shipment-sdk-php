@@ -21,7 +21,7 @@ class ProductTest extends TestCase
     /**
      * @test
      */
-    public function is_valid_quantity_of_product()
+    public function isValidQuantityOfProducts()
     {
         $quantity = $this->product->getQuantity();
 
@@ -33,7 +33,7 @@ class ProductTest extends TestCase
     /**
      * @test
      */
-    public function is_invalid_quantity_of_product()
+    public function isInvalidQuantityOfProducts()
     {
         $this->expectException(InvalidArgumentException::class);
 

@@ -40,7 +40,7 @@ class EndpointTest extends TestCase
     /**
      * @test
      */
-    public function is_valid_endpoint_sandbox()
+    public function isValidEndpointSandbox()
     {
         $response = $this->client->post('https://sandbox.melhorenvio.com.br', array(
             'request.options' => array(
