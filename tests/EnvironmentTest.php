@@ -15,7 +15,7 @@ class EnvironmentTest extends TestCase
     const TOKEN = 'token-testing';
 
     /** @test */
-    public function is_invalid_environment()
+    public function isInvalidEnvironment()
     {
         $this->expectException(InvalidEnvironmentException::class);
 
@@ -23,7 +23,7 @@ class EnvironmentTest extends TestCase
     }
 
     /** @test */
-    public function is_valid_environment()
+    public function isValidEnvironment()
     {
         foreach (Environment::ENVIRONMENTS as $environment) {
             $shipment = new Shipment(self::TOKEN, $environment);
