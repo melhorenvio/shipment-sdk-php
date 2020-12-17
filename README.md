@@ -157,7 +157,8 @@ $calculator->addServices(
         Service::JADLOG_COM, 
         Service::AZULCARGO_AMANHA,
         Service::AZULCARGO_ECOMMERCE,
-        Service::LATAMCARGO_JUNTOS
+        Service::LATAMCARGO_JUNTOS,
+        Service::VIABRASIL_RODOVIARIO
     );
 ```
 
