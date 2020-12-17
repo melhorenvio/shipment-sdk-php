@@ -145,15 +145,19 @@ Se você desejar customizar, nesta parte serão escolhidos os serviços das tran
 * Correios
 * Jadlog
 * Via Brasil
-* Azul Cargo 
+* Azul Cargo
+* Latam Cargo
 
 ```php
 $calculator->addServices(
         Service::CORREIOS_PAC, 
         Service::CORREIOS_SEDEX,
+        Service::CORREIOS_MINI,
         Service::JADLOG_PACKAGE, 
         Service::JADLOG_COM, 
-        Service::AZULCARGO_AMANHA
+        Service::AZULCARGO_AMANHA,
+        Service::AZULCARGO_ECOMMERCE,
+        Service::LATAMCARGO_JUNTOS
     );
 ```
 
