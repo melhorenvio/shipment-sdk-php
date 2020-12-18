@@ -21,12 +21,6 @@ class Service
     const JADLOG_COM = 4;
 
     /**
-     * Services - JAMEF
-     * @var int
-     */
-    const JAMEF_RODOVIARIO = 7;
-
-    /**
      * Services - VIABRASIL
      * @var int
      */
