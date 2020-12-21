@@ -5,14 +5,13 @@
         "melhorenvio",
         "shipment-sdk-php"
     ],
-    "homepage": "https://github.com/melhorenvio/shipment-sdk",
+    "homepage": "https://github.com/melhorenvio/shipment-sdk-php",
     "license": "MIT",
     "type": "library",
     "authors": [
         {
-            "name": "Rodrigo Silveira",
-            "email": "rodrigo.silveira@melhorenvio.com",
-            "role": "Developer"
+            "name": "Melhor Envio",
+            "email": "tecnologia@melhorenvio.com"
         }
     ],
     "require": {
