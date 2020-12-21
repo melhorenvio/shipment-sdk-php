@@ -6,7 +6,7 @@
         "shipment-sdk-php"
     ],
     "homepage": "https://github.com/melhorenvio/shipment-sdk-php",
-    "license": "MIT",
+    "license": "Melhor Envio",
     "type": "library",
     "authors": [
         {
