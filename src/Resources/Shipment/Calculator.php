@@ -276,7 +276,7 @@ class Calculator
 
         try {
             $response = $this->resource->getHttp()->post('me/shipment/calculate', [
-                'form_params' => $this->payload,
+                'json' => $this->payload,
             ]);
 
             return json_decode((string) $response->getBody(), true);
