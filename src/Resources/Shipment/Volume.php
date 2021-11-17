@@ -8,113 +8,70 @@ use InvalidArgumentException;
 
 abstract class Volume implements Arrayable
 {
-    /**
-     * @var int|float
-     */
-    protected $height;
+    protected float $height;
 
-    /**
-     * @var int|float
-     */
-    protected $width;
+    protected float $width;
 
-    /**
-     * @var int|float
-     */
-    protected $length;
+    protected float $length;
 
-    /**
-     * @var int|float
-     */
-    protected $weight;
+    protected float $weight;
 
-    /**
-     * @return int|float
-     */
-    public function getWeight()
+    public function getWeight(): float
     {
         return $this->weight;
     }
 
-    /**
-     * @param int|float $weight
-     */
-    public function setWeight($weight)
+    public function setWeight(float $weight)
     {
         $this->validateNumericArgument($weight, 'weight');
 
         $this->weight = $weight;
     }
 
-    /**
-     * @return int|float
-     */
-    public function getLength()
+    public function getLength(): float
     {
         return $this->length;
     }
 
-    /**
-     * @param int|float $length
-     */
-    public function setLength($length)
+    public function setLength(float $length)
     {
         $this->validateNumericArgument($length, 'length');
 
         $this->length = $length;
     }
 
-    /**
-     * @return int|float
-     */
-    public function getWidth()
+    public function getWidth(): float
     {
         return $this->width;
     }
 
-    /**
-     * @param int|float $width
-     */
-    public function setWidth($width)
+    public function setWidth(float $width)
     {
         $this->validateNumericArgument($width, 'width');
 
         $this->width = $width;
     }
 
-    /**
-     * @return int|float
-     */
-    public function getHeight()
+    public function getHeight(): float
     {
         return $this->height;
     }
 
-    /**
-     * @param int|float $height
-     */
-    public function setHeight($height)
+    public function setHeight(float $height)
     {
         $this->validateNumericArgument($height, 'height');
 
         $this->height = $height;
     }
 
-    /**
-     * @param int|float $number
-     * @param string $argument
-     */
-    protected function validateNumericArgument($number, $argument)
+    protected function validateNumericArgument(float $number, string $argument)
     {
         if (! Number::isPositive($number)) {
             throw new InvalidArgumentException($argument);
         }
     }
 
-    /**
-     * @return bool
-     */
-    public function isValid()
+    public function isValid(): bool
     {
         return ! empty($this->getHeight())
             && ! empty($this->getWidth())

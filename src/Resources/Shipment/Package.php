@@ -4,22 +4,15 @@ namespace MelhorEnvio\Resources\Shipment;
 
 class Package extends Volume
 {
-    /**
-     * @var int|float
-     */
-    protected $insurance;
+    protected float $insurance;
 
-    /**
-     * Package constructor
-     *
-     * @param $height
-     * @param $width
-     * @param $length
-     * @param $weight
-     * @param $insurance
-     */
-    public function __construct($height, $width, $length, $weight, $insurance)
-    {
+    public function __construct(
+        float $height,
+        float $width,
+        float $length,
+        float $weight,
+        float $insurance
+    ) {
         $this->setHeight($height);
         $this->setWidth($width);
         $this->setLength($length);
@@ -27,26 +20,17 @@ class Package extends Volume
         $this->setInsurance($insurance);
     }
 
-    /**
-     * @return int|float
-     */
-    public function getInsurance()
+    public function getInsurance(): float
     {
         return $this->insurance;
     }
 
-    /**
-     * @param int|float $insurance
-     */
-    public function setInsurance($insurance)
+    public function setInsurance(float $insurance)
     {
         $this->insurance = $insurance;
     }
 
-    /**
-     * @return array
-     */
-    public function toArray()
+    public function toArray(): array
     {
         return [
             'height' => $this->getHeight(),
