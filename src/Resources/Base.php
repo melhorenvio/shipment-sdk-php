@@ -11,26 +11,13 @@ use MelhorEnvio\Exceptions\InvalidEnvironmentException;
 
 abstract class Base implements Resource
 {
-    /**
-     * @var string
-     */
-    protected $token;
+    protected string $token;
 
-    /**
-     * @var string
-     */
-    protected $environment;
+    protected string $environment;
 
-    /**
-     * @var ClientInterface
-     */
-    protected $http;
+    protected ClientInterface $http;
 
-    /**
-     * @param $token
-     * @param $environment
-     */
-    public function __construct($token, $environment = null)
+    public function __construct(string $token, string $environment = null)
     {
         $this->token = $token;
 
@@ -45,19 +32,12 @@ abstract class Base implements Resource
         ]);
     }
 
-    /**
-     * @return string
-     */
-    public function getEnvironment()
+    public function getEnvironment(): string
     {
         return $this->environment;
     }
 
-    /**
-     * @param string $environment
-     * @return void
-     */
-    public function setEnvironment($environment)
+    public function setEnvironment(string $environment): void
     {
         if (! in_array($environment, Environment::ENVIRONMENTS)) {
             throw new InvalidEnvironmentException;
@@ -66,22 +46,15 @@ abstract class Base implements Resource
         $this->environment = $environment;
     }
 
-    /**
-     * Get Http Client
-     * @return ClientInterface
-     */
-    public function getHttp()
+    public function getHttp(): ClientInterface
     {
         return $this->http;
     }
 
     /**
-     * Set Http Client
-     *
-     * @param ClientInterface $http
      * @throws Exception
      */
-    public function setHttp($http)
+    public function setHttp(ClientInterface $http): void
     {
         if (! $http instanceof ClientInterface) {
             throw new Exception('The parameter passed is not an instance of ' . ClientInterface::class);

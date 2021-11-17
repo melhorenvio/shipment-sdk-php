@@ -6,14 +6,7 @@ use GuzzleHttp\ClientInterface;
 
 interface Resource
 {
-    /**
-     * @return ClientInterface
-     */
-    public function getHttp();
+    public function getHttp(): ClientInterface;
 
-    /**
-     * @param ClientInterface $http
-     * @return void
-     */
-    public function setHttp($http);
+    public function setHttp(ClientInterface $http): void;
 }
