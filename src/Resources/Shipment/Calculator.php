@@ -8,28 +8,21 @@ use MelhorEnvio\Exceptions\CalculatorException;
 use MelhorEnvio\Exceptions\InvalidCalculatorPayloadException;
 use MelhorEnvio\Exceptions\InvalidResourceException;
 use MelhorEnvio\Exceptions\InvalidVolumeException;
+use MelhorEnvio\Resources\Shipment\Package;
 use MelhorEnvio\Resources\Resource;
 use MelhorEnvio\Validations\Location;
 use MelhorEnvio\Validations\Number;
 
 class Calculator
 {
-    /**
-     * @var array
-     */
-    protected $payload = [];
+    protected array $payload = [];
+
+    protected Resource $resource;
 
     /**
-     * @var Resource
-     */
-    protected $resource;
-
-    /**
-     * New Calculate instance.
-     * @param $resource
      * @throws InvalidArgumentException
      */
-    public function __construct($resource)
+    public function __construct(Resource $resource)
     {
         if (! $resource instanceof Resource) {
             throw new InvalidResourceException;
@@ -39,39 +32,31 @@ class Calculator
     }
 
     /**
-     * @param $postalCode
      * @throws InvalidArgumentException
      */
-    public function from($postalCode)
+    public function from(string $postalCode)
     {
         $this->addPostalCodeInPayload('from', $postalCode);
     }
 
     /**
-     * @param  $postalCode
      * @throws InvalidArgumentException
      */
-    public function to($postalCode)
+    public function to(string $postalCode)
     {
         $this->addPostalCodeInPayload('to', $postalCode);
     }
 
-    /**
-     * @param int|string $from
-     * @param int|string $to
-     */
-    public function postalCode($from, $to)
+    public function postalCode(string $from, string $to)
     {
         $this->addPostalCodeInPayload('from', $from);
         $this->addPostalCodeInPayload('to', $to);
     }
 
     /**
-     * @param string $key
-     * @param $postalCode
      * @throws InvalidArgumentException
      */
-    protected function addPostalCodeInPayload($key, $postalCode)
+    protected function addPostalCodeInPayload(string $key, string $postalCode)
     {
         if (! $this->isValidPostalCode($postalCode)) {
             throw new InvalidArgumentException($key);
@@ -81,10 +66,9 @@ class Calculator
     }
 
     /**
-     * @param  $products
      * @throws InvalidArgumentException
      */
-    public function addProducts($products)
+    public function addProducts(Product $products)
     {
         $products = is_array($products) ? $products : func_get_args();
 
@@ -94,10 +78,9 @@ class Calculator
     }
 
     /**
-     * @param  $packages
      * @throws InvalidArgumentException
      */
-    public function addPackages($packages)
+    public function addPackages(Package $packages)
     {
         $packages = is_array($packages) ? $packages : func_get_args();
 
@@ -107,10 +90,9 @@ class Calculator
     }
 
     /**
-     * @param Package $package
      * @throws InvalidVolumeException
      */
-    public function addPackage($package)
+    public function addPackage(Package $package)
     {
         if (! $this->isValidPackage($package)) {
             throw new InvalidVolumeException('package');
@@ -120,10 +102,9 @@ class Calculator
     }
 
     /**
-     * @param Product $product
      * @throws InvalidVolumeException
      */
-    public function addProduct($product)
+    public function addProduct(Product $product)
     {
         if (! $this->isValidProduct($product)) {
             throw new InvalidVolumeException('product');
@@ -133,7 +114,6 @@ class Calculator
     }
 
     /**
-     * @param $services
      * @throws InvalidArgumentException
      */
     public function addServices($services)
@@ -146,10 +126,9 @@ class Calculator
     }
 
     /**
-     * @param int $service
      * @throws InvalidArgumentException
      */
-    public function addService($service)
+    public function addService(int $service)
     {
         if (! $this->isValidService($service)) {
             throw new InvalidArgumentException('service');
@@ -163,11 +142,9 @@ class Calculator
     }
 
     /**
-     * Add Receipt in payload options
-     * @param  $receipt
      * @throws InvalidArgumentException
      */
-    public function setReceipt($receipt = true)
+    public function setReceipt(bool $receipt = true)
     {
         if (! is_bool($receipt)) {
             throw new InvalidArgumentException('receipt');
@@ -177,11 +154,9 @@ class Calculator
     }
 
     /**
-     * Add own hand in payload options
-     * @param  $ownHand
      * @throws InvalidArgumentException
      */
-    public function setOwnHand($ownHand = true)
+    public function setOwnHand(bool $ownHand = true)
     {
         if (! is_bool($ownHand)) {
             throw new InvalidArgumentException('own_hand');
@@ -191,11 +166,9 @@ class Calculator
     }
 
     /**
-     * Add collect in payload options
-     * @param bool $collect
      * @throws InvalidArgumentException
      */
-    public function setCollect($collect = true)
+    public function setCollect(bool $collect = true)
     {
         if (! is_bool($collect)) {
             throw new InvalidArgumentException('collect');
@@ -204,47 +177,27 @@ class Calculator
         $this->payload['options']['collect'] = $collect;
     }
 
-    /**
-     * @param $postalCode
-     * @return bool
-     */
-    public function isValidPostalCode($postalCode)
+    public function isValidPostalCode(string $postalCode): bool
     {
         return Location::isPostalCode($postalCode);
     }
 
-    /**
-     * @param Product $product
-     * @return bool
-     */
-    public function isValidProduct($product)
+    public function isValidProduct(Product $product): bool
     {
         return $product instanceof Product && $product->isValid();
     }
 
-    /**
-     * @param Package $package
-     * @return bool
-     */
-    public function isValidPackage($package)
+    public function isValidPackage(Package $package): bool
     {
         return $package instanceof Package && $package->isValid();
     }
 
-    /**
-     * @param $service
-     * @return bool
-     */
-    protected function isValidService($service)
+    protected function isValidService(int $service): bool
     {
         return Number::isPositiveInteger($service);
     }
 
-    /**
-     * @return void
-     * @throws InvalidCalculatorPayloadException
-     */
-    protected function validatePayload()
+    protected function validatePayload(): void
     {
         if (empty($this->payload['from']['postal_code']) || empty($this->payload['to']['postal_code'])) {
             throw new InvalidCalculatorPayloadException('The CEP is invalid.');
@@ -259,10 +212,7 @@ class Calculator
         }
     }
 
-    /**
-     * @return array
-     */
-    public function getPayload()
+    public function getPayload(): array
     {
         return $this->payload;
     }
@@ -285,10 +235,7 @@ class Calculator
         }
     }
 
-    /**
-     * @return false|string
-     */
-    public function __toString()
+    public function __toString():  ?string
     {
         return json_encode($this->getPayload());
     }

@@ -7,10 +7,7 @@ use MelhorEnvio\Resources\Shipment\Calculator;
 
 class Shipment extends Base
 {
-    /**
-     * @return Calculator
-     */
-    public function calculator()
+    public function calculator(): Calculator
     {
         return new Calculator($this);
     }

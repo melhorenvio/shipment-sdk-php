@@ -5,40 +5,23 @@ namespace MelhorEnvio\Resources\Shipment;
 use MelhorEnvio\Validations\Number;
 use InvalidArgumentException;
 
-/**
- * Class Product
- * @package MelhorEnvio\Resources\Shipment
- */
 class Product extends Volume
 {
-    /**
-     * @var string
-     */
-    protected $id;
+    protected string $id;
 
-    /**
-     * @var int|float
-     */
-    protected $insuranceValue;
+    protected float $insuranceValue;
 
-    /**
-     * @var int
-     */
-    protected $quantity;
+    protected int $quantity;
 
-    /**
-     * Product constructor.
-     *
-     * @param string $id
-     * @param $height
-     * @param $width
-     * @param $length
-     * @param $weight
-     * @param $insuranceValue
-     * @param $quantity
-     */
-    public function __construct($id, $height, $width, $length, $weight, $insuranceValue, $quantity = 1)
-    {
+    public function __construct(
+        string $id,
+        float $height,
+        float $width,
+        float $length,
+        float $weight,
+        float $insuranceValue,
+        int $quantity = 1
+    ) {
         $this->setId($id);
         $this->setHeight($height);
         $this->setWidth($width);
@@ -48,34 +31,22 @@ class Product extends Volume
         $this->setQuantity($quantity);
     }
 
-    /**
-     * @return string
-     */
-    public function getId()
+    public function getId(): string
     {
         return $this->id;
     }
 
-    /**
-     * @param string $id
-     */
-    public function setId($id)
+    public function setId(string $id)
     {
         $this->id = (string) $id;
     }
 
-    /**
-     * @return int
-     */
-    public function getQuantity()
+    public function getQuantity(): int
     {
         return $this->quantity;
     }
 
-    /**
-     * @param int $quantity
-     */
-    public function setQuantity($quantity)
+    public function setQuantity(int $quantity)
     {
         if (! Number::isPositiveInteger($quantity)) {
             throw new InvalidArgumentException("quantity");
@@ -84,28 +55,19 @@ class Product extends Volume
         $this->quantity = $quantity;
     }
 
-    /**
-     * @return int|float
-     */
-    public function getInsuranceValue()
+    public function getInsuranceValue(): float
     {
         return $this->insuranceValue;
     }
 
-    /**
-     * @param int|float $insuranceValue
-     */
-    public function setInsuranceValue($insuranceValue)
+    public function setInsuranceValue(float $insuranceValue)
     {
         $this->validateNumericArgument($insuranceValue, 'insurance_value');
 
         $this->insuranceValue = $insuranceValue;
     }
 
-    /**
-     * @return array
-     */
-    public function toArray()
+    public function toArray(): array
     {
         return [
             'id' => $this->getId(),
