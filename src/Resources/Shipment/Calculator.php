@@ -235,7 +235,7 @@ class Calculator
         }
     }
 
-    public function __toString():  ?string
+    public function __toString():  string
     {
         return json_encode($this->getPayload());
     }

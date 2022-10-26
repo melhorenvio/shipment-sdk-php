@@ -21,7 +21,7 @@ class EndpointTest extends TestCase
      */
     private $client;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $mockHandler = new MockHandler([
             new Response(200, ['Foo' => 'Bar'], 'ResponseContext'),
