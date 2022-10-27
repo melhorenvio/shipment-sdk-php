@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "php": "7.4.*",
+        "php": "^7.4|^8.0|^8.1",
         "ext-json": "*",
         "guzzlehttp/guzzle": "^6.5",
         "symfony/polyfill-php74": "^1.23"
