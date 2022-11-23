@@ -8,12 +8,13 @@ use MelhorEnvio\Exceptions\CalculatorException;
 use MelhorEnvio\Exceptions\InvalidCalculatorPayloadException;
 use MelhorEnvio\Exceptions\InvalidResourceException;
 use MelhorEnvio\Exceptions\InvalidVolumeException;
+use MelhorEnvio\Interfaces\Resources\Shipment\ICalculator;
 use MelhorEnvio\Resources\Shipment\Package;
 use MelhorEnvio\Resources\Resource;
 use MelhorEnvio\Validations\Location;
 use MelhorEnvio\Validations\Number;
 
-class Calculator
+class Calculator implements ICalculator
 {
     protected array $payload = [];
 
