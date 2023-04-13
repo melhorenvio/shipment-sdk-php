@@ -9,36 +9,38 @@ Agora ficou mais fácil ter o serviço de cotações do Melhor Envio no seu proj
 
 ## Índice
 
-* [Instalação](#instalacao)
-* [Cofiguração Inicial](##configuração-inicial)
-* [Exemplos de uso](##Criando-a-instância-calculadora)
-    * [Criação da calculadora](###Criando-a-instância-calculadora)
-    * [Montando o payload da calculadora](###Montando-o-payload-da-calculadora)
-    * [Adicionando CEPs de origem e destino](####Adicionando-CEPs-de-origem-e-destino)
-    * [Produtos](###Produtos)
-        * [Adicionando os produtos para cotação](###Adicionando-os-produtos-para-cotação)
-    * [Pacotes](###Pacotes)
-        * [Adicionando os pacotes para cotação](####Adicionando-os-pacotes-para-cotação)
-    * [Adicionando os serviços das transportadoras](####Adicionando-os-serviços-das-transportadoras)
-    * [Adicionando serviços adicionais](####Adicionando-serviços-adicionais)
-    * [Retornando a cotação](####Retornando-as-informações-da-cotação)
-* [Mais exemplos](##Mais-Exemplos)
-* [Testes](##Testes)
-* [Changelog](##Changelog)
-* [Contribuindo](##Contribuindo)
-* [Segurança](##Segurança)
-* [Créditos](##Créditos)
-* [Licença](##Licença)
+* [Instalação](#instalação)
+* [Cofiguração Inicial](#configuração-inicial)
+* [Exemplos de uso](#exemplos-de-uso)
+    * [Criação da calculadora](#criando-a-instância-calculadora)
+    * [Adicionando CEPs de origem e destino](#adicionando-ceps-de-origem-e-destino)
+    * [Produtos](#produtos)
+        * [Adicionando os produtos para cotação](#adicionando-os-produtos-para-cotação)
+    * [Pacotes](#pacotes)
+        * [Adicionando os pacotes para cotação](#adicionando-os-pacotes-para-cotação)
+    * [Adicionando os serviços das transportadoras](#adicionando-os-serviços-das-transportadoras)
+    * [Adicionando serviços adicionais](#adicionando-serviços-adicionais)
+    * [Retornando a cotação](#retornando-as-informações-da-cotação)
+* [Mais exemplos](#mais-exemplos)
+* [Testes](#testes)
+* [Changelog](#changelog)
+* [Contribuindo](#contribuindo)
+* [Segurança](#segurança)
+* [Créditos](#créditos)
+* [Licença](#licença)
 
 ## Dependências
 
 ### require 
-* PHP >= 7.4
+* PHP 7.4, 8.0 ou 8.1
 * Ext-json = *
 * Guzzlehttp/guzzle >= 7.0
+* symfony/polyfill-php74 >= 1.23
 
 ### require-dev
+* mockery/mockery >= 1.3.6
 * phpunit/phpunit >= 9.5
+
 
 
 ## Instalação
@@ -69,23 +71,23 @@ use MelhorEnvio\Enums\Environment;
 $shipment = new Shipment('your-token', Environment::PRODUCTION);
 ```
 
-## Criando a instância calculadora
+## Exemplos de uso
+
+### Criando a instância calculadora
 
 Neste exemplo você criará uma instância para calculadora no seu código.
 
 ```php
 // Create Calculator Instance
-    $calculator = $shipment->calculator();
+$calculator = $shipment->calculator();
 ```
-
-## Montando o payload da calculadora
 
 ### Adicionando CEPs de origem e destino
 
 Nesta parte você deve definir os CEPs de origem e destino respectivamente. 
 
 ```php
-//Builds calculator payload
+// Builds calculator payload
 $calculator->postalCode('01010010', '20271130');
 ```
 
@@ -225,4 +227,4 @@ Se você descobrir algum problema de segurança, por favor, envie um e-mail para
 
 ## Licença
 
-Melhor Envio. Consulte [Arquivo de lincença](LICENSE.md) para mais informações.
+Melhor Envio. Consulte [Arquivo de licença](LICENSE.md) para mais informações.
